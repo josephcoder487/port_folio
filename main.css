@@ -89,3 +89,11 @@ body{
   transform: rotate(-45deg) translateY(100%);   
 }
 /*ends*/
+
+.mid{
+    height: 600px;
+    background-color: darkslateblue;
+}
+.runtext{
+    background: rgb(138, 235, 119);
+}
