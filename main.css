@@ -1,5 +1,5 @@
 body{
-    background-color: azure;
+    background: linear-gradient(to left, lightblue, azure);
     font-family: 'Poppins', sans-serif;
 }
 .toolbar{
@@ -38,6 +38,8 @@ body{
     margin-left: 20px;
     width: 50%;
 }
+
+
 .highlight{
     color: darkslateblue;
 }
