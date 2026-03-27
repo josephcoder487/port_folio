@@ -9,7 +9,7 @@ body{
     height: 55px;
     justify-content: flex-end;
 }
-.toolbar li {
+.toolbar li{;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 50px;
@@ -17,11 +17,10 @@ body{
     list-style: none;
     color: white;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
-
-.toolbar li:hover {
-    transform: scale(1.2);
+.toolbar li:hover{
+ transform: scale(1.2);
+ animation-duration: 0.3s;
 }
 
 /* the center part */
@@ -66,12 +65,13 @@ body{
 
 
 /* this is from prismic*/
-.proc h2{
+
+/* .proc h2{
   color: #0ff;
   font-size: 2rem;
   position: relative;
   z-index: 2;
-}
+} */
 .proc::before {
   content: '';
   position: absolute;
