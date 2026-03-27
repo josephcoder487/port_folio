@@ -66,12 +66,7 @@ body{
 
 
 /* this is from prismic*/
-.proc h2{
-  color: #0ff;
-  font-size: 2rem;
-  position: relative;
-  z-index: 2;
-}
+
 .proc::before {
   content: '';
   position: absolute;
