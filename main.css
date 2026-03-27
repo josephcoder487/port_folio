@@ -97,3 +97,14 @@ body{
 .runtext{
     background: rgb(138, 235, 119);
 }
+
+/* the certificates */
+.certificate{
+    display: flex   ;
+}
+.cer1{
+    width: 370px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
