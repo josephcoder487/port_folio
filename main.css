@@ -47,6 +47,25 @@ body{
     transform: scale(1.2);
 }
 
+
+/*this is from claude page refference   */
+.toolbar { list-style: none; display: flex;}
+.toolbar a {
+  text-decoration: none; font-size: 14px; font-weight: 500;
+  color: var(--muted); transition: color 0.2s;
+  position: relative; padding-bottom: 4px;
+  font-weight: bolder;
+  font-size: large;
+}
+.toolbar a:hover { color: var(--text); }
+.toolbar a.active { color: var(--accent); }
+.toolbar a.active::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 2px; background: var(--accent); border-radius: 2px;
+}
+
+
+
 /* the center part */
 .home{
     display: flex;
