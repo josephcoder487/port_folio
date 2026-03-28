@@ -2,6 +2,12 @@ body{
     background: linear-gradient(to left, lightblue, azure);
     font-family: 'Poppins', sans-serif;
 }
+.topname{
+    margin-left: 0%;
+    margin-right: 700px;
+    margin-top: auto;
+    color: aliceblue;
+}
 .toolbar{
     display: flex;
     background-color:darkslateblue;
@@ -94,19 +100,119 @@ body{
 
 .mid{
     height: 600px;
-    background-color: darkslateblue;
+    background-color: darkslateblue;;
 }
 .runtext{
     background: rgb(138, 235, 119);
 }
 
-/* the certificates */
-.certificate{
-    display: flex   ;
-}
-.cer1{
-    width: 370px;
-    height: 300px;
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
-    margin-left: 50px;
+    position: relative;
+}
+
+/* STACK BOX */
+.stack {
+    position: relative;
+    width: 1450px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+/* CARDS */
+.card {
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    transform-style: preserve-3d;   /*  IMPORTANT */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ENTRY DELAY */
+.card1 { animation-delay: 0.2s; }
+.card2 { animation-delay: 0.5s; }
+.card3 { animation-delay: 0.8s; }
+
+
+/* STACK POSITIONS (NO transform conflict now) */
+.card1 {
+    left: 0;
+    top: 40px;
+    rotate: -10deg;   /*  use rotate instead of transform */
+}
+
+.card2 {
+    left: 50px;
+    top: 0;
+}
+
+.card3 {
+    left: 100px;
+    top: 40px;
+    rotate: 10deg;
+}
+
+/*  CARD HOVER (MAIN EFFECT) */
+.card:hover {
+    transform: translateZ(120px) scale(1.05);  /* forward pop */
+    z-index: 10;
+    box-shadow: 0 40px 80px rgba(0,255,255,0.8);
+
+
+/*  STACK SPREAD (ON HOVER OF GROUP) */
+.stack:hover .card1 {
+    transform: translateX(-20px) rotate(-15deg);
+}
+
+.stack:hover .card3 {
+    transform: translateX(20px) rotate(15deg);
+}
+
+/* STACK SPREAD (only when NOT hovering card) */
+.stack:hover .card1:not(:hover) {
+    transform: translateX(-30px) rotate(-15deg);
+}
+
+.stack:hover .card3:not(:hover) {
+    transform: translateX(30px) rotate(15deg);
+} 
+
+
+/* ENTRY ANIMATION (FIXED) */
+@keyframes fadeUp {
+     from {
+          opacity: 0;
+         transform: translateY(40px);
+     }
+     to {
+         opacity: 1;
+        transform: translateY(0);
+     }
+ }
+}
+
+.head1{
+    color: azure;
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: auto;
 }
