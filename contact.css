@@ -1,0 +1,181 @@
+/* ── contact.css ── matches main.css theme ── */
+
+.contact-page {
+  padding: 40px 60px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+  color: white;
+}
+
+.contact-header h4 {
+  color: #ccc;
+  font-weight: 400;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ── cards grid ── */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 22px 24px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.25s, transform 0.2s, border-color 0.25s;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+/* icon circles */
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.linkedin-icon { background: #0a66c2; }
+.email-icon    { background: #7c3aed; }
+.phone-icon    { background: #16a34a; }
+.insta-icon    { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+.contact-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: white;
+}
+
+.contact-info p {
+  font-size: 0.88rem;
+  color: #aaa;
+  margin: 0;
+  word-break: break-all;
+}
+
+/* ── form section ── */
+.form-section {
+  text-align: center;
+}
+
+.form-section .head1 {
+  font-size: 2rem;
+  margin-bottom: 28px;
+  color: white;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 36px 40px;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  color: #aaa;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  font-family: inherit;
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+/* reuse the site's .proc button style */
+.form-box .proc {
+  margin-top: 8px;
+}
+
+/* ── responsive ── */
+@media (max-width: 700px) {
+  .contact-page {
+    padding: 30px 20px 50px;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-box {
+    padding: 24px 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+}
