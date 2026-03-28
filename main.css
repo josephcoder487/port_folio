@@ -32,7 +32,7 @@ body{
     height: 55px;
     justify-content: flex-end;
 }
-.toolbar li {
+.toolbar li{
     font-size: 20px;
     margin-left: 20px;
     margin-right: 50px;
@@ -125,14 +125,11 @@ body{
 }
 .runtext{
     background:#F0F4F8;
-
+    display: inline-block;
+    font-size: 12px;
+    color: var(--accent);
+    animation: ticker-scroll 30s linear infinite;
 }
-
-
-
-
-
-
 
 
 
