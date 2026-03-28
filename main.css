@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to left, lightblue, azure);
+    background: linear-gradient(to left, #0D1B2A, #1B2B3B);
     font-family: 'Poppins', sans-serif;
 }
 .topname{
@@ -10,7 +10,7 @@ body{
 }
 .toolbar{
     display: flex;
-    background-color:darkslateblue;
+    background-color:#00d5ffe3;
     padding-top: 10px;
     height: 55px;
     justify-content: flex-end;
@@ -36,10 +36,10 @@ body{
     margin-top: 150px;
 }
 .top {
-    color: #606060;
+    color: #7B8FA8;
     font-size: 24px;
     font-weight: bold;
-    text-align:left;
+    text-align:left;    
     margin-top: 100px;
     margin-left: 20px;
     width: 50%;
@@ -47,7 +47,7 @@ body{
 
 
 .highlight{
-    color: darkslateblue;
+    color: #00d5ffe3;
 }
 .top h4{
     font-weight:lighter;
@@ -61,11 +61,11 @@ body{
     width: 200px;
     border-radius: 10%;
     color: white;
-    background-color: darkslateblue;
+    background-color: #00d5ffe3;
     overflow: hidden;
     transition: all 0.5s ease;
     position: relative;
- 
+    margin-top: 0%;
     }
 .proc:hover{
     transform: scale(1.05);
@@ -100,10 +100,11 @@ body{
 
 .mid{
     height: 600px;
-    background-color: darkslateblue;;
+    background-color: #00d5ffe3;
 }
 .runtext{
     background: rgb(138, 235, 119);
+
 }
 
 
@@ -123,7 +124,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     position: relative;
 }
 
@@ -213,6 +214,7 @@ body{
 .head1{
     color: azure;
     margin-left: 200px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: auto;
+    font-family:Cambria;
 }
