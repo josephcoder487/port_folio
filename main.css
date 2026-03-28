@@ -2,12 +2,29 @@ body{
     background: linear-gradient(to left, #0D1B2A, #1B2B3B);
     font-family: 'Poppins', sans-serif;
 }
-.topname{
-    margin-left: 0%;
-    margin-right: 700px;
+
+
+
+/* tihs is for that glow text*/
+.topname {
+    text-shadow: 0 0 5px #11273f, 0 0 10px #11273f, 0 0 20px #11273f, 0 0 40px #11273f, 0 0 80px #11273f;
+    animation: glow 1.5s infinite alternate;
+    margin-left: 5px;
+    margin-right: 600px;
     margin-top: auto;
     color: aliceblue;
 }
+
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #11273f, 0 0 10px #11273f, 0 0 20px #11273f, 0 0 40px #11273f, 0 0 80px #11273f;
+    }
+    100% {
+        text-shadow: 0 0 10px #263d53, 0 0 20px #263d53, 0 0 40px #263d53, 0 0 80px #263d53, 0 0 160px #263d53;
+    }
+}
+/* ends */
 .toolbar{
     display: flex;
     background-color:#00d5ffe3;
@@ -45,7 +62,9 @@ body{
     width: 50%;
 }
 
-
+.fn{
+    color: #F0F4F8;
+}
 .highlight{
     color: #00d5ffe3;
 }
@@ -66,6 +85,8 @@ body{
     transition: all 0.5s ease;
     position: relative;
     margin-top: 0%;
+    font-weight: bold;
+    font-size: large;
     }
 .proc:hover{
     transform: scale(1.05);
@@ -103,7 +124,7 @@ body{
     background-color: #00d5ffe3;
 }
 .runtext{
-    background: rgb(138, 235, 119);
+    background:#F0F4F8;
 
 }
 
