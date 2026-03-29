@@ -1,3 +1,6 @@
+:root{
+   --font:       'Poppins', sans-serif;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -10,23 +13,12 @@ body{
 
 /* tihs is for that glow text*/
 .topname {
-    text-shadow: 0 0 5px #11273f, 0 0 10px #11273f, 0 0 20px #11273f, 0 0 40px #11273f, 0 0 80px #11273f;
-    animation: glow 1.5s infinite alternate;
-    margin-left: 5px;
+    margin-left: 0%;
     margin-right: 600px;
     margin-top: auto;
-    color: aliceblue;
+    color:#1B2B3B;
 }
 
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #11273f, 0 0 10px #11273f, 0 0 20px #11273f, 0 0 40px #11273f, 0 0 80px #11273f;
-    }
-    100% {
-        text-shadow: 0 0 10px #263d53, 0 0 20px #263d53, 0 0 40px #263d53, 0 0 80px #263d53, 0 0 160px #263d53;
-    }
-}
 /* ends */
 .toolbar{
     display: flex;
@@ -99,6 +91,7 @@ overflow: hidden; /* Ensures the content is not revealed until the animation */
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
     display: inline-block;
+    font-family: var(--font);
 }
 
 /* The typing effect */
