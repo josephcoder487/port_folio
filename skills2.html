@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skills | Joseph Noah</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+
+    .skills-hero {
+      background: linear-gradient(to left, #0D1B2A, #1B2B3B);
+      padding: 80px 60px 50px;
+      text-align: center;
+    }
+    .skills-hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #F0F4F8;
+      margin-bottom: 12px;
+    }
+    .skills-hero p {
+      color: #7B8FA8;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    /* skills section — same bg as about/achievement */
+    .skills-section {
+      background: #1b2a3b;
+      padding: 60px 60px 70px;
+    }
+
+    .skills-section .head1 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: Cambria;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    /* category label */
+    .cat-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #F0F4F8;
+      margin-bottom: 18px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cat-label:first-of-type { margin-top: 0; }
+
+    .cat-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #00bcd4;
+      flex-shrink: 0;
+    }
+
+    .cat-dot.purple { background: #7B61FF; }
+    .cat-dot.green  { background: #00E676; }
+
+    /* skill cards grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: rgba(0,188,212,0.07);
+      border: 2px solid rgba(0,188,212,0.3);
+      border-radius: 14px;
+      padding: 20px 18px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 24px rgba(0, 213, 255, 0.2);
+    }
+
+    .skill-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #F0F4F8;
+      margin-bottom: 14px;
+    }
+
+    .skill-bar-track {
+      background: rgba(255,255,255,0.07);
+      border-radius: 99px;
+      height: 6px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #00bcd4, #00d5ff);
+      transition: width 1.3s ease;
+    }
+
+    .skill-pct {
+      font-size: 0.75rem;
+      color: #00bcd4;
+      text-align: right;
+    }
+
+    /* tags section — same .mid cyan bg as index */
+    .tags-section {
+      background: #00d5ffe3;
+      padding: 50px 60px;
+      text-align: center;
+    }
+
+    .tags-section .head1 {
+      font-size: 1.8rem;
+      color: #1B2B3B;
+      margin-bottom: 28px;
+      font-family: Cambria;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.25);
+      border: 2px solid rgba(27,43,59,0.3);
+      color: #11273f;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 99px;
+      transition: background 0.2s, transform 0.2s;
+      cursor: default;
+    }
+
+    .tag:hover {
+      background: rgba(255,255,255,0.45);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      .skills-hero, .skills-section, .tags-section { padding: 40px 20px 50px; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- TOOLBAR — same as index.html -->
+<div class="toolbar">
+  <h2 class="topname">Portfolio</h2>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#about">About</a></li>
+  <li><a href="education2.html">Education</a></li>
+  <li><a href="achievement2.html">Achievement</a></li>
+  <li><a href="skills2.html" class="active">Skills</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</div>
+
+<!-- HERO -->
+<section class="skills-hero">
+  <h1>My <span class="highlight">Skills</span></h1>
+  <p>Things I know and work with — still learning more every day.</p>
+</section>
+
+<!-- MARQUEE — exact same as index.html -->
+<div class="mid" style="height:auto; padding-bottom:4px;">
+  <hr class="line1">
+  <marquee class="runtext"> 🚀 &nbsp; React &nbsp; • &nbsp; Node.js &nbsp; • &nbsp; Java &nbsp; • &nbsp; Python &nbsp; • &nbsp; MySQL &nbsp; • &nbsp; MongoDB &nbsp; • &nbsp; Git &nbsp; • &nbsp; HTML &nbsp; • &nbsp; CSS &nbsp; • &nbsp; JavaScript &nbsp; • &nbsp; </marquee>
+  <hr class="line1">
+</div>
+
+<!-- SKILLS SECTION -->
+<section class="skills-section">
+  <h2 class="head1">What I <span class="highlight">Know</span></h2>
+
+  <!-- Frontend -->
+  <div class="cat-label"><span class="cat-dot"></span> Frontend</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-name">HTML5</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+      <div class="skill-pct">95%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">CSS3</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+      <div class="skill-pct">90%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+      <div class="skill-pct">85%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">React</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+      <div class="skill-pct">80%</div>
+    </div>
+  </div>
+
+  <!-- Backend -->
+  <div class="cat-label"><span class="cat-dot purple"></span> Backend</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-name">Node.js</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+      <div class="skill-pct">82%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Java</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+      <div class="skill-pct">78%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Python</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+      <div class="skill-pct">72%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">REST APIs</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+      <div class="skill-pct">88%</div>
+    </div>
+  </div>
+
+  <!-- Database & Tools -->
+  <div class="cat-label"><span class="cat-dot green"></span> Database & Tools</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-name">MySQL</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+      <div class="skill-pct">80%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">MongoDB</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+      <div class="skill-pct">75%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Git & GitHub</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+      <div class="skill-pct">88%</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">VS Code</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+      <div class="skill-pct">95%</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TAGS — same cyan as .mid -->
+<section class="tags-section">
+  <h2 class="head1">Technologies I work with</h2>
+  <div class="tags-wrap">
+    <span class="tag">React</span>
+    <span class="tag">Node.js</span>
+    <span class="tag">Java</span>
+    <span class="tag">Python</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">MongoDB</span>
+    <span class="tag">HTML5</span>
+    <span class="tag">CSS3</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">Git</span>
+    <span class="tag">REST API</span>
+    <span class="tag">Express.js</span>
+    <span class="tag">Bootstrap</span>
+    <span class="tag">Tailwind</span>
+  </div>
+</section>
+
+<!-- FOOTER — same as index.html -->
+<footer style="text-align: center;">
+  <p>&copy; 2026 Joseph Noah G. All rights reserved.</p>
+</footer>
+
+<script>
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+      const w = bar.getAttribute('data-width');
+      setTimeout(() => { bar.style.width = w + '%'; }, 300);
+    });
+  });
+</script>
+
+</body>
+</html>
