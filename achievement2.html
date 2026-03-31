@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Achievement — Joseph Noah</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+
+    /* ── PAGE HERO ── */
+    .achieve-hero {
+      background: linear-gradient(to left, #0D1B2A, #1B2B3B);
+      padding: 80px 60px 50px;
+      text-align: center;
+    }
+    .achieve-hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #F0F4F8;
+      margin-bottom: 12px;
+    }
+    .achieve-hero p {
+      color: #7B8FA8;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    /* ── STATS ROW ── */
+    .achieve-stats {
+      background: linear-gradient(to left, #0D1B2A, #1B2B3B);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 60px 60px;
+    }
+
+    /* ── CERTIFICATES SECTION ── */
+    .achieve-section {
+      background: #1b2a3b;
+      padding: 60px 60px 70px;
+    }
+    .achieve-section .head1 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: Cambria;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    /* ── CERT CARDS GRID ── */
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 0 auto 60px;
+    }
+    .cert-card {
+      background: rgba(0,188,212,0.07);
+      border: 2px solid rgba(0,188,212,0.3);
+      border-radius: 16px;
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 28px rgba(0, 213, 255, 0.25);
+    }
+    .cert-card-img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid rgba(0,188,212,0.2);
+    }
+    .cert-card-noimg {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.6rem;
+      background: rgba(0,0,0,0.15);
+      border-bottom: 1px solid rgba(0,188,212,0.2);
+    }
+    .cert-card-body {
+      padding: 18px 20px 20px;
+    }
+    .cert-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .cert-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .tag-issuer {
+      background: rgba(0,188,212,0.12);
+      border: 1px solid rgba(0,188,212,0.35);
+      color: #00bcd4;
+    }
+    .tag-complete {
+      background: rgba(0,230,118,0.1);
+      border: 1px solid rgba(0,230,118,0.3);
+      color: #00e676;
+    }
+    .tag-participate {
+      background: rgba(255,179,0,0.1);
+      border: 1px solid rgba(255,179,0,0.3);
+      color: #ffb300;
+    }
+    .cert-card-body h3 {
+      color: #F0F4F8;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .cert-card-body p {
+      color: #7B8FA8;
+      font-size: 0.83rem;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .cert-card-footer {
+      border-top: 1px solid rgba(0,188,212,0.15);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .cert-date {
+      font-size: 0.76rem;
+      color: #7B8FA8;
+      font-weight: 400;
+    }
+    .cert-id {
+      font-size: 0.7rem;
+      color: #7B8FA8;
+      font-family: monospace;
+    }
+
+    /* ── PROJECTS SECTION ── */
+    .projects-section {
+      background: linear-gradient(to left, #0D1B2A, #1B2B3B);
+      padding: 60px 60px 70px;
+      text-align: center;
+    }
+    .projects-section .head1 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 40px;
+      font-family: Cambria;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    .proj-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .proj-card {
+      background: rgba(0,188,212,0.07);
+      border: 2px solid rgba(0,188,212,0.3);
+      border-radius: 16px;
+      width: 380px;
+      padding: 26px 24px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .proj-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 28px rgba(0, 213, 255, 0.25);
+    }
+    .proj-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .proj-type {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #00bcd4;
+      background: rgba(0,188,212,0.12);
+      border: 1px solid rgba(0,188,212,0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .proj-link {
+      font-size: 0.78rem;
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .proj-link:hover { color: #F0F4F8; }
+    .proj-card h3 {
+      color: #F0F4F8;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .proj-card p {
+      color: #7B8FA8;
+      font-size: 0.83rem;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .chip {
+      font-size: 0.7rem;
+      font-weight: 500;
+      background: rgba(0,0,0,0.2);
+      border: 1px solid rgba(0,188,212,0.2);
+      color: #7B8FA8;
+      padding: 3px 11px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .achieve-hero, .achieve-section,
+      .projects-section, .achieve-stats { padding: 40px 20px 50px; }
+      .cert-card, .proj-card { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOOLBAR — exact from index.html -->
+<div class="toolbar">
+  <h2 class="topname">Portfolio</h2>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#about">About</a></li>
+  <li><a href="education2.html">Education</a></li>
+  <li><a href="achievement2.html" class="active">Achievement</a></li>
+  <li><a href="skills.html">Skills</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</div>
+
+<!-- HERO -->
+<section class="achieve-hero">
+  <h1>My <span class="highlight">Achievements</span></h1>
+  <p>Certifications, projects and milestones on my journey as a Fullstack Developer.</p>
+</section>
+
+<!-- STATS — uses your exact .stat-box from main.css -->
+<div class="achieve-stats">
+  <div class="stat-box">
+    <h2>5+</h2>
+    <p>Certifications</p>
+  </div>
+  <div class="stat-box">
+    <h2>2+</h2>
+    <p>Live Projects</p>
+  </div>
+  <div class="stat-box">
+    <h2>3</h2>
+    <p>Platforms</p>
+  </div>
+  <div class="stat-box">
+    <h2>2026</h2>
+    <p>Latest Cert</p>
+  </div>
+</div>
+
+<!-- MARQUEE — exact same as index.html -->
+<div class="mid" style="height:auto; padding-bottom:4px;">
+  <hr class="line1">
+  <marquee class="runtext"> 🚀 &nbsp; Welcome to my portfolio &nbsp; • &nbsp; Full Stack Developer &nbsp; • &nbsp; React &nbsp; • &nbsp; Node &nbsp; • &nbsp; Java &nbsp; • &nbsp; Let's build something amazing &nbsp; • &nbsp; </marquee>
+  <hr class="line1">
+</div>
+
+<!-- CERTIFICATES SECTION -->
+<section class="achieve-section">
+  <h2 class="head1">My <span class="highlight">Certificates</span></h2>
+
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <img src="static/fullstack.PNG" alt="Full-Stack Certificate" class="cert-card-img">
+      <div class="cert-card-body">
+        <div class="cert-tags">
+          <span class="cert-tag tag-issuer">GUVI · HCL</span>
+          <span class="cert-tag tag-complete">Completion</span>
+        </div>
+        <h3>Full-Stack (MERN) App / Web Development</h3>
+        <p>Comprehensive fullstack program covering MongoDB, Express, React and Node.js for building modern web applications.</p>
+        <div class="cert-card-footer">
+          <span class="cert-date">📅 04 Dec 2025</span>
+          <span class="cert-id">ID: MYMFSM2587</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <img src="static/dataanal.PNG" alt="Data Analytics Certificate" class="cert-card-img">
+      <div class="cert-card-body">
+        <div class="cert-tags">
+          <span class="cert-tag tag-issuer">GUVI · HCL</span>
+          <span class="cert-tag tag-complete">Completion</span>
+        </div>
+        <h3>Data Analytics Traineeship</h3>
+        <p>Hands-on traineeship covering data analysis, visualization and building real-world analytics dashboards.</p>
+        <div class="cert-card-footer">
+          <span class="cert-date">📅 07 Feb 2026</span>
+          <span class="cert-id">ID: MYMDATA3090</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <img src="static/ai.PNG" alt="ChatGPT Certificate" class="cert-card-img">
+      <div class="cert-card-body">
+        <div class="cert-tags">
+          <span class="cert-tag tag-issuer">GUVI · HCL</span>
+          <span class="cert-tag tag-complete">Completion</span>
+        </div>
+        <h3>ChatGPT for Everyone</h3>
+        <p>Explored practical AI tools, prompt engineering and integrating ChatGPT into real-world workflows.</p>
+        <div class="cert-card-footer">
+          <span class="cert-date">📅 09 Feb 2026</span>
+          <span class="cert-id">ID: 7Ss0479g3A01M77f66</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card-noimg">🏆</div>
+      <div class="cert-card-body">
+        <div class="cert-tags">
+          <span class="cert-tag tag-issuer">HP LIFE</span>
+          <span class="cert-tag tag-complete">Completion</span>
+        </div>
+        <h3>Critical Thinking in the AI Era</h3>
+        <p>Learned to apply critical thinking to AI-generated content, counteract biases and fact-check information effectively.</p>
+        <div class="cert-card-footer">
+          <span class="cert-date">📅 23 Mar 2026</span>
+          <span class="cert-id">HP Foundation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card-noimg">🎓</div>
+      <div class="cert-card-body">
+        <div class="cert-tags">
+          <span class="cert-tag tag-issuer">GUVI · HCL</span>
+          <span class="cert-tag tag-participate">Participation</span>
+        </div>
+        <h3>DevOps — Getting Started Without Complex Coding</h3>
+        <p>Participated in a live webinar on DevOps fundamentals and modern deployment practices for developers.</p>
+        <div class="cert-card-footer">
+          <span class="cert-date">📅 21 Nov 2025</span>
+          <span class="cert-id">GUVI Webinar</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+    <a href="contact.html">
+      <button class="proc"><h3>CONTACT ME</h3></button>
+    </a>
+  </div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="projects-section">
+  <h2 class="head1">Featured <span class="highlight">Projects</span></h2>
+
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-card-top">
+        <span class="proj-type">AI · Web Dev</span>
+        <a class="proj-link" href="https://www.linkedin.com/posts/joseph-noah-fullstackdeveloper_ai-webdevelopment-projectshowcase-activity-7416854954469937152-ArOo" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+      </div>
+      <h3>AI Web Development Showcase</h3>
+      <p>A fullstack web development project integrating AI capabilities, built with modern web technologies and deployed live.</p>
+      <div class="chip-row">
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">AI</span>
+        <span class="chip">Fullstack</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-card-top">
+        <span class="proj-type">Data Analytics</span>
+        <a class="proj-link" href="https://www.linkedin.com/posts/joseph-noah-fullstackdeveloper_maiyyam-dataanalytics-salesdashboard-activity-7421486828563865600-tYWX" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+      </div>
+      <h3>Maiyyam — Sales Analytics Dashboard</h3>
+      <p>A real-world sales analytics dashboard for Maiyyam featuring KPI tracking, data visualization and business insights.</p>
+      <div class="chip-row">
+        <span class="chip">Data Analytics</span>
+        <span class="chip">Dashboard</span>
+        <span class="chip">Sales</span>
+        <span class="chip">Visualization</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER — exact from index.html -->
+<footer style="text-align: center;">
+  <p>&copy; 2026 Joseph Noah G. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

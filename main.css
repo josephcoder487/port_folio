@@ -13,8 +13,8 @@ body{
 
 /* tihs is for that glow text*/
 .topname {
-    margin-left: 0%;
     margin-right: 600px;
+    margin-left: 10px;
     margin-top: auto;
     color:#1B2B3B;
 }
@@ -26,6 +26,7 @@ body{
     padding-top: 10px;
     height: 55px;
     justify-content: flex-end;
+    position: sticky; top: 0; z-index: 100;
 }
 .toolbar li{
     font-size: 20px;
