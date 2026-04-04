@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio_Joseph_Fullstack</title>
 <link rel="stylesheet" href="main.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -9,18 +10,18 @@
 <!-- this toolbar -->
 <div class="toolbar">
     <h2 class="topname">Portfolio</h2>
-    
-    <li><a href="index.html">Home</a></li>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="education2.html">Education</a></li>
       <li><a href="achievement2.html">Achievement</a></li>
       <li><a href="skills2.html" class="active">Skills</a></li>
       <li><a href="contact.html">Contact</a></li>
-
+    </div>
 </div>
 
 <div class="home">
-        <!-- summa-->
     <div class="top">
     <h1 class="name">Hi, I'm <span class="highlight">Joseph Noah</span>,</h1>
     <h2 class="fn">Fullstack Developer</h2>
@@ -37,11 +38,6 @@
     </div>
 </div><br>
 
-<!-- description -->
-
-
-
-
 <div class="mid">
     <hr class="line1">
     <marquee class="runtext"> 🚀 &nbsp; Welcome to my portfolio &nbsp;  •  &nbsp; Full Stack Developer  &nbsp; • &nbsp;  React &nbsp;  •  &nbsp; Node &nbsp;• &nbsp;  Java  &nbsp; • &nbsp;  Let's build something amazing  &nbsp; • &nbsp; </marquee>
@@ -52,12 +48,8 @@
     </div>
     <br>
 
-
-    <!-- this is for certicates -->
-
     <div class="mann">
 
-    <!-- the hover things part -->
     <div class="certificate">
         <div class="stack">
             <img src="static/fullstack.PNG" class="card card1" onclick="">
@@ -66,58 +58,28 @@
         </div>
     </div>
     
-    <!--this is side of the certificate-->
-    <
     <div class="sathanai">
-      
       <img src="static/pro1.PNG" class="cards pic1">
-      <img src="static/pro2.PNG" class="cards pic2"        >
-
-
-
+      <img src="static/pro2.PNG" class="cards pic2">
+    </div>
 
     </div>
 </div>
-
-
-
-    </div>
-
-
-</div>
-
-
-
-
- 
-<!-- this is for achivements that is about taken from claude-->   
-
-
-
 
 <div class="about" id="about">
- 
   <h2 class="head1">About <span class="highlight">Me</span></h2>
- 
   <div class="about-container">
- 
-    <!-- Left: profile image -->
     <div class="about-image">
       <img src="static/image1.png" alt="Joseph Noah">
     </div>
- 
-    <!-- Right: about text -->
     <div class="about-content">
- 
       <h2 class="about-title">Hi, I'm <span class="highlight">Joseph Noah</span></h2>
       <h3 class="about-role">Fullstack Developer</h3>
- 
       <p class="about-desc">
         I'm a passionate Fullstack Developer who loves building complete web applications
         from front to back. I specialise in creating responsive user interfaces and
         powerful backend systems that are scalable, efficient, and user-friendly.
       </p>
- 
       <p class="about-desc">
         With hands-on experience in <span class="highlight">React</span>,
         <span class="highlight">Node.js</span>, and
@@ -125,8 +87,6 @@
         and creative problem-solving. I enjoy learning new technologies and constantly
         improving my craft.
       </p>
- 
-      <!-- quick stats -->
       <div class="about-stats">
         <div class="stat-box">
           <h2>3+</h2>
@@ -141,33 +101,23 @@
           <p>Stack Dev</p>
         </div>
       </div>
- 
       <a href="contact.html">
         <button class="proc"><h3>CONTACT ME</h3></button>
       </a>
- 
     </div>
   </div>
-</div>    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 <footer style="text-align: center;">
     <p>&copy; 2026 Joseph Noah G. All rights reserved.</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+</script>
 
 </body>
 </html>
