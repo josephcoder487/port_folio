@@ -184,6 +184,31 @@ overflow: hidden; /* Ensures the content is not revealed until the animation */
     font-size: 20px;
     
 }
+.mann{
+  display: flex;
+
+}
+.pic1{
+  border-radius: 30px;
+  perspective: 1000px;
+   rotate: -10deg;
+    left: 100px;
+    top: 40px;
+     object-fit: cover;
+     transform-style: preserve-3d;
+
+}
+.pic2{
+  border-radius: 30px;
+  perspective: 1000px;
+   rotate:  10deg;
+}
+.sathanai{
+  height: 200px;
+  width: 200px;
+  display: flex;
+
+}
 
 
 
@@ -198,6 +223,8 @@ overflow: hidden; /* Ensures the content is not revealed until the animation */
     align-items: center;
     margin-top: 50px;
     position: relative;
+    width: 40%;
+    margin-left:190px;
 }
 
 /* STACK BOX */
